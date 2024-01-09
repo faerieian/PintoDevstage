@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'Sarabun';
+    src: url('/font/Sarabun-Medium.ttf') format('truetype');
+
+    font-family: 'Sarabun-regular';
+    src: url('/font/Sarabun-Regular.ttf') format('truetype');
+
+    /* Add similar lines for other font file formats */
+}
+body, h1, p, header, .dashboard {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    font-family: 'Sarabun';
+    color: #4E4E4E;
+    font-size: 12px;
+}
+body{
+    background: #EEEBE6;
+}
+.header {
+    background-color: #f8f9fa;
+    padding: 0px 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    width: 73px;
+}
+.header .user-profile-img{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.header .user-name-txt{
+    font-size: 12px;
+    font-family: 'Sarabun';
+}
+
+
+.header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-right .dropdown button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.header .divider {
+    height: 56px;
+    border-left: 1px solid #EEEBE6;
+    margin: 0 15px;
+}
+.header .header-btn{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 174px;
+    /* width: 219px; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    top: 56px;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.clock-icon{
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.arrow-icon{
+    margin-left: 10px;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-top: 100px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+/* Override styles for list-navmenu and list-submenu */
+li.list-navmenu a, li.list-submenu a {
+    color: #4E4E4E;           /* Set text color to black */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer;       /* Optional: Ensure cursor is pointer on hover */
+}
+
+/*  :link pseudo-class */
+li.list-navmenu a:link, li.list-submenu a:link {
+    color: #4E4E4E;           /* Set text color to black */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* For visited links  */
+li.list-navmenu a:visited, li.list-submenu a:visited {
+    color: #4E4E4E;           /* Set text color to black */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.sidebar {
+    margin-left: 35px;
+    margin-top: 100px;
+    /* background-color: #f8f9fa; Light gray background */
+    width: 240px; /* Sidebar width */
+    min-height: 400px;
+    padding: 15px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.sidebar ul {
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    /* ... other styles ... */
+}
+
+.sidebar nav li {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+
+}
+
+.sidebar nav li:not(.active) {
+    background-color: transparent; /* Non-active items should not have the green background */
+}
+
+.sidebar nav li.active {
+    background-color: #A6B26F; /* Slightly different shade for active item */
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.sidebar nav li.list-submenu.active {
+    background:#C9CEA9;
+    font-weight:bold;
+}
+/* Style for sub-menu */
+.submenu {
+    display: none; /* Hidden by default */
+    background-color: #C9CEA9; /* Slightly different shade for submenu */
+
+}
+
+/* Display sub-menu when parent li is active */
+.sidebar nav li.active .submenu {
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.submenu li {
+    padding: 5px 10px; /* Slightly less padding for submenu items */
+    background-color: #6DB65B; /* Same as submenu background */
+
+}
+
+/* .submenu li:hover {
+    background-color:  #8BD48E !important; ; /* Slightly lighter on hover */
+/* } */
+
+/* This styles the hover state for all .list-navmenu items */
+.sidebar nav li.list-navmenu:hover {
+    background-color: #D3D3D3;
+}
+
+/* This ensures that the hover background color is not applied when .list-navmenu is also .active */
+.sidebar nav li.list-navmenu.active:hover {
+    background-color: #A6B26F;
+}
+
+.sidebar nav li.list-submenu:hover{
+    background-color:  #D3D3D3;
+}
+
+.list-submenu{
+    color: #4E4E4E;
+    padding-left: 50px !important;
+}
+/* Base styles for icons */
+.icon-dashboard, .icon-customer, .icon-foodmenu, .icon-ingredients, .icon-order, .icon-prepare, .icon-delivery {
+    width: 20px;
+    height: 15px;
+    color: #628254; /* Default color for non-active state */
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/* Style for when the parent li has .active class */
+.sidebar nav li.active .icon-dashboard,
+.sidebar nav li.active .icon-customer,
+.sidebar nav li.active .icon-foodmenu,
+.sidebar nav li.active .icon-ingredients,
+.sidebar nav li.active .icon-order,
+.sidebar nav li.active .icon-prepare,
+.sidebar nav li.active .icon-delivery {
+    color: #ffffff; /* White color for active state */
+}
+
+li.active a{
+    color: #fff;
+    text-decoration: none;
+}
+li a{
+    color: #4E4E4E;
+    text-decoration: none;
+}
+
+
+.content-area {
+    /* padding: 20px; */
+    /* background-color: #fff; Background color for the content area */
+    flex-grow: 1;
+    padding-bottom: 50px;
+    /* overflow-y: auto; Adds scroll to the content area if content overflows */
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.content-tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 0px; /* Space between header and table */
+}
+.content-header{
+    color: #4E4E4E; /* Text color for the header */
+}
+.content-header-title{
+    margin: 0px;
+    font-size: 16px;
+}
+.add-new-button {
+    padding: 10px 25px;
+    background-color: #237239;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+    font-size: 12px;
+    font-family: 'Sarabun';
+
+}
+
+.add-new-button:hover {
+    background-color: #367c39; /* Darker shade for hover state */
+}
+
+.content-table {
+    background-color: #fff; /* Light background for the table */
+    /* border: 1px solid #e1e4e8; Light border for the table */
+    /* border-collapse: collapse; Collapse borders */
+    width: 100%; /* Full width of the content area */
+    /* margin-top: 20px; Space between header and table */
+    border-collapse: separate; /* Use separate instead of collapse to allow border-radius */
+    border-radius: 4px;
+    border-spacing: 0;
+    /* margin-top: -3px;
+    position: relative;
+    z-index: 5; */
+}
+
+.content-table table {
+    width: 100%; /* Full width of the content area */
+    /* border-collapse: collapse; Collapse borders */
+    border-spacing: 0;
+    border-radius: 4px;
+}
+
+/* This is to ensure that the first and last child of each row has the border-radius applied */
+.content-table table tr:first-child th:first-child {
+    border-top-left-radius: 4px;
+}
+
+.content-table table tr:first-child th:last-child {
+    border-top-right-radius: 4px;
+}
+
+.content-table table tr:last-child td:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+.content-table table tr:last-child td:last-child {
+    border-bottom-right-radius: 4px;
+}
+
+.content-table th,
+.content-table td {
+    text-align: left;
+    padding: 20px 20px; /* Padding inside cells */
+    border-bottom: 1px solid #e1e4e8; /* Border for each cell */
+}
+
+.content-table th {
+    background-color: #fff; /* Slightly darker background for header */
+    /* color: #333; Color for the header text */
+}
+
+.content-table tr:hover {
+    background-color: #f5f5f5; /* Highlight on hover for each row */
+}
+
+/* customerdetail */
+
+.icon-filter{
+    margin-left: 5px;
+    width: 15px;
+    height: 10px;
+}
+
+.custid{
+    color:#00B733;
+}
+.th-title{
+    font-size: 11px;
+    font-weight: 500;
+    color: #4E4E4E !important;
+}
+.td-text{
+    font-size: 11px;
+    font-weight: 500;
+    color: #4E4E4E;
+}
+.td-amount-total{
+    font-size: 11px;
+    font-weight: 500;
+    color: #4E4E4E;
+}
+
+.category-tabs {
+    display: flex;
+    /* gap: 20px; Adjust the gap between tabs */
+}
+
+.category-tabs p {
+    position: relative;
+    padding: 10px 0px;
+    margin: 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; /* Initially no border */
+    color: #237239; /* Default text color */
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.title-tab:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -8px; /* Adjust the distance between text and divider */
+    transform: translateY(-50%);
+    width: 1px; /* Divider width */
+    height: 40%; /* Adjust the height of the divider */
+    background-color: #000; /* Divider background color */
+}
+.category-tabs p.active {
+    /* border-bottom: 2px solid #237239; Border color for active tab */
+    color: #237239;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Border color for input group */
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.icon-search {
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
+}
+
+.custom-input {
+    padding: 10px;
+    border: none; /* Remove border from input */
+    font-size: 14px;
+    flex: 1; /* Take remaining space */
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.icon-chevron {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Adjust the spacing between icons and page numbers */
+    cursor: pointer;
+}
+
+.page-number {
+    margin-right: 10px; /* Adjust the spacing between page numbers */
+    cursor: pointer;
+}
+
+.page-number.active {
+    /* font-weight: bold; Style for the active page */
+    color: #fff;
+    background-color: #A6B26F;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+
+/* create customer */
+.icon-smt-btn{
+    margin-right: 10px;
+}
+
+.create-customers-tabs{
+    display:flex;
+}
+.create-customers-tabs li{
+    position: relative;
+    padding: 10px 25px;
+    margin: 0;
+    cursor: pointer;
+    color: #4E4E4E; /* Default text color */
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 2px;
+    border-radius: 4px;
+    background: #A6B26F;
+}
+
+.create-customers-tabs > li.active{
+    color: #fff ;
+}
+ul {
+    list-style-type: none;
+}
+.cre-cust-tab-content{
+    background: #fff;
+    border-radius: 4px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+    margin-bottom: 100px;
+}
+
+
+.error{
+    color: red;
+    font-size: 20px;
+}
+
+.btn-edit{
+    border: none;
+    background: none;
+    cursor: pointer;
+}

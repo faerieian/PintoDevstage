@@ -1,0 +1,264 @@
+/* Reset the margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.creuser-table:first-of-type {
+    border-top: none;
+}
+.creuser-table:last-of-type {
+    padding: 30px 15px 50px 15px;
+}
+
+.creuser-table{
+    padding: 30px 15px 15px 15px;
+    border-top: 1px solid #EEEBE6;
+}
+
+/* Style the form container */
+.customer-form {
+    width: 100%;
+    max-width: 100%; /* Adjust as necessary */
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 11px;
+}
+
+/* Style the form groups */
+.form-group-basic-info {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; This separates the label and input */
+    margin-bottom: 20px; /* Adjust as necessary */
+}
+
+/* Style labels */
+.form-group-basic-info label {
+    font-weight: 500;
+    min-width: 120px; /* Adjust as necessary */
+    text-align: left;
+    margin-right: 10px;
+}
+
+/* Style inputs */
+.form-control {
+    flex: 1; /* Allows input to fill available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Custom radio button and checkbox appearance */
+.checkbox-group label,
+.radio-group label {
+    position: relative;
+    /* padding-left: 25px; */
+    cursor: pointer;
+}
+
+.radio-group label {
+    padding-left: 25px;
+}
+.radio-group label:nth-child(1){
+    padding-left: 0px;
+}
+
+
+.checkbox-group label:before {
+    border-radius: 3px; /* Square for checkboxes */
+}
+
+/* Style when checked */
+.checkbox-group input:checked + label:before,
+.radio-group input:checked + label:before {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Style the select element */
+select.form-control {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group-basic-info-custom{
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    margin: 0 5px;
+}
+
+/* Custom styles for the select dropdown */
+.birthdate-selectors select {
+    /* -webkit-appearance: none; Removes default chrome and safari style */
+    /* -moz-appearance: none; Removes default style Firefox */
+    /* appearance: none; Removes default style */
+    padding: 10px;
+    margin: 0 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    font-size: 14px;
+}
+
+/* To hide the default select arrow in IE */
+.birthdate-selectors select::-ms-expand {
+    display: none;
+}
+
+
+
+/* When select is focused */
+.birthdate-selectors select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Label styling */
+.form-group-basic-info > label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Flex container styling */
+.birthdate-selectors {
+    display: flex;
+    align-items: center;
+}
+
+/* Additional styles to ensure that the label and selects align correctly */
+.form-group-basic-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.birthdate-selectors select {
+    flex: 1; /* Adjust as necessary, or set a specific width */
+}
+
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group-basic-info-custom {
+    margin-bottom: 20px;
+}
+
+.form-group-basic-info-custom label {
+    font-weight: 500;
+    display: block; /* Make the label display as block to render it on a new line */
+    margin-bottom: 20px; /* Add some space below the label */
+}
+/* Style the checkbox group to display inline */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the space between checkboxes as needed */
+    align-items: baseline;
+    /* forstylye */
+}
+.checkbox-group input[type="checkbox"] + label {
+    position: relative;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.form-row-inline{
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+    gap: 20px; /* Adjust the gap as needed */
+    margin-bottom: 20px;
+
+}
+
+.form-group {
+    /* display: flex;
+    flex-direction: column;
+    flex-grow: 1; Each form group will take up equal space */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group input[type="number"] {
+    width: 100%; /* Full width of the parent container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.label-sp{
+    font-size: 10px;
+    color: #6E6E6E;
+}
+.title-bold{
+    font-weight: bold !important;
+}
+.title-bold h3{
+    font-weight: bold !important;
+    font-size: 16px !important;
+    margin-bottom: 20px;
+}
+.radio-label {
+    margin-left: 5px; /* Adds spacing to the left of the text */
+    vertical-align: top;
+}
+
+.box-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.box-input-top{
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-group-basic-info {
+        flex-direction: column;
+    }
+    .form-group-basic-info > label,
+    .form-group-basic-info > .form-control,
+    .form-group-basic-info > .birthdate-selectors,
+    .form-group-basic-info > .radio-group {
+        flex: none;
+        width: 100%;
+    }
+    .birthdate-selectors {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .birthdate-selectors select {
+        width: 100%;
+        margin: 5px 0; /* Adjust spacing for mobile */
+    }
+    .checkbox-group {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+}
+

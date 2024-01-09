@@ -1,0 +1,47 @@
+.content-table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the start of the input groups */
+    gap: 10px; /* Adjust the space between rows */
+    padding: 20px;
+    padding-bottom: 120px;
+}
+
+.form-nutrition {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between label/input groups */
+    flex-flow: row wrap; /* Wrap the input groups to the next line if not enough space */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Stack the label on top of the input */
+    align-items: start;
+    border: none;
+    gap: 5px; /* Space between label and input */
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+ .btnadd{
+    padding: 10px 25px;
+    background-color: #237239;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Sarabun';
+}
+
+

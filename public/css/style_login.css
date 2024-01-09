@@ -1,0 +1,134 @@
+/* login.css */
+@font-face {
+    font-family: 'Sarabun';
+    src: url('/font/Sarabun-Medium.ttf') format('truetype');
+
+    font-family: 'Sarabun-regular';
+    src: url('/font/Sarabun-Regular.ttf') format('truetype');
+
+    /* Add similar lines for other font file formats */
+}
+body, h1, p, header, .dashboard {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    font-family: 'Sarabun';
+}
+
+  .login-container {
+    position: relative;
+    display: flex;
+    min-height: 100vh; /* Use min-height to ensure it covers the viewport height */
+  }
+
+  .side-overlay {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 75%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.side-overlay img {
+    width: 20px; /* Adjust as needed */
+    height: auto;
+}
+
+  .form-section {
+    flex: 3; /* Assign flex to split space equally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-sizing: border-box; /* Add box-sizing to include padding in the element's total width and height */
+    background: #EEEBE6;
+  }
+
+  .image-section {
+    flex: 1; /* Assign flex to split space equally */
+    background: url('../image/Mask Group 1@2x.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  .login-form {
+    width: 100%; /* Full width of the form-section */
+    max-width: 400px; /* Maximum width of the form itself */
+    margin: 0 auto; /* Center the form in the form-section if it's narrower than max-width */
+  }
+
+  .label-email,
+.label-password {
+  display: block;
+  margin-bottom: 5px; /* Adjust as needed */
+  font: normal normal normal 12px Sarabun;
+}
+.form-group {
+    margin-bottom: 30px;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: calc(100% - 30px); /* Calculate width, accounting for padding */
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 6px;
+  }
+
+  .action-container {
+    max-width: 370px;
+    display: flex;
+    justify-content: space-between; /* This will position the button and text at opposite ends */
+    align-items: center; /* Vertically center align the button and text */
+    margin-top: 63px;
+  }
+
+  .btn-login {
+    padding: 15px;
+    background-color: #237239;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 170px;
+    border-radius: 24px;
+    font-size: 14px;
+  }
+
+  .forgot-password {
+    color: #237239;
+    font-size: 12px;
+  }
+  .login-form h2 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .plus-image-overlay {
+    position: absolute;
+  left: 75.8%; /* Center horizontally relative to the parent container */
+  top: 50%; /* Center vertically relative to the parent container */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  }
+
+  .plus-image-overlay img {
+    display: block; /* This ensures there are no additional margins */
+    width: auto; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+.logo-image img {
+    width: 170px; /* Adjust as needed */
+    height: auto;
+}
+
+.text-under-logo{
+    font-family: 'Sarabun';
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #4E4E4E;
+    margin-bottom: 70px;
+    margin-top: 19px;
+}

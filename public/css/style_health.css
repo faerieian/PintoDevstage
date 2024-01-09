@@ -1,0 +1,126 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+.flex-item-left {
+
+    flex: 50%;
+    padding: 30px 15px 15px 15px;
+  }
+  .flex-item-right {
+
+    flex: 10%;
+    border-left: 1px solid #ccc;
+    margin-bottom: -100px;
+  }
+
+/* Flex container for the whole form */
+.form-container-health {
+
+    /* padding: 30px 15px 15px 15px; */
+    padding-bottom: 100px;
+
+}
+
+/* Styles for the left column with form inputs */
+.health-form {
+    /* flex-grow: 2; Allows the form to grow and take up more space */
+    /* padding: 20px; Spacing around the form content */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styles for individual form groups */
+.form-group-health {
+    margin-bottom: 20px; /* Space between form groups */
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+/* Label styles */
+.form-group-health > label {
+    margin-right: 10px; /* Space between label and input */
+    white-space: nowrap; /* Prevents the label from wrapping */
+}
+
+/* Input styles */
+.form-group-health > input,
+.form-group-health > textarea,
+.form-group-health > .radio-group {
+    flex-grow: 1; /* Allows input to fill up the remaining space */
+    padding: 10px; /* Padding inside the input */
+
+}
+
+/* Styles for the radio group within a form group */
+.radio-group {
+    display: flex;
+    gap: 10px; /* Spacing between radio buttons */
+}
+
+/* Styles for the right column with file upload */
+.new-column {
+    flex-grow: 1; /* Allows the new-column to take up space but less than the form */
+    padding: 30px 15px 15px 15px;
+}
+
+/* File upload and file list styles */
+.file-upload {
+    /* Additional styles as needed */
+}
+
+.file-list {
+    margin-top: 10px; /* Space above the file list */
+    /* Additional styles as needed */
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+    background: #C9CEA9;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #00B733;
+    text-decoration: underline;
+    height: 30px;
+    font-size: 12px;
+    font-family: 'Sarabun';
+}
+
+.browse-files-button {
+    padding: 10px 40px;
+    background-color: #237239;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Sarabun';
+    width: 100%;
+    height: 30px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .form-container-health {
+        flex-direction: column; /* Stack the columns on smaller screens */
+    }
+
+    .health-form,
+    .new-column {
+        width: 100%; /* Full width on smaller screens */
+        padding: 15px;
+    }
+
+    .new-column {
+        border-left: none; /* Remove border on smaller screens */
+        margin-top: 20px; /* Space between form and file upload on smaller screens */
+    }
+    .flex-item-right, .flex-item-left {
+        flex: 100%;
+        margin-bottom: 0px;
+      }
+}

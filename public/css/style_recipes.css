@@ -1,0 +1,118 @@
+/* Reset the margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content-title-recipes{
+    font-size: 16px;
+    margin-top: 30px;
+}
+.content-table{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+/* Style the form container */
+.recipes-form {
+    /* width: 100%; */
+    max-width: 100%; /* Adjust as necessary */
+    margin: 20px auto;
+    padding: 20px 20px 20px 20px;
+    padding-right: 100px;
+    /* background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.form-container {
+    display: flex;
+    justify-content: space-between; /* This will position columns side by side */
+    background: #fff;
+    border-radius: 4px;
+}
+.new-recipes-column{
+    flex: 1; /* This flex-grow value is arbitrary, adjust as necessary */
+    padding: 20px;
+    margin-top: 20px;
+    padding-right: 100px;
+    /* border-left: 1px solid #ccc; To get the line between the columns */
+    /* Add additional styling for the new column here */
+}
+/* Target the last tr within tbody that is a descendant of .new-recipes-column and remove the bottom border */
+.new-recipes-column tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.label-sp{
+    font-size: 10px;
+    color: #6E6E6E;
+}
+.title-bold{
+    font-weight: 500 !important;
+}
+.title-bold h3{
+    font-size: 12px !important;
+    margin-bottom: 20px;
+    font-weight: bold ;
+}
+.title-bold-filter h3{
+    font-size: 12px !important;
+}
+/*custom text table */
+.td-text{
+    color:#4E4E4E;
+}
+.td-text-csamount{
+    color:#000;
+}
+
+.recipes-container{
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 4px;
+}
+.recipes-flex-item-left{
+    flex: 2;
+}
+
+.recipes-flex-item-right{
+    flex: 2;
+}
+
+/* .form-container-recipes {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+} */
+
+/* Form styles */
+.recipes-form {
+    width: 100%; /* Adjust as necessary */
+}
+
+.form-group-recipes {
+    margin-bottom: 15px;
+}
+
+.form-group-recipes label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-recipes input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
