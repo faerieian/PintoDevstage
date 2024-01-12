@@ -1,3 +1,6 @@
+Ongoing Development
+As this project is in an active development phase, we are continually working to enhance its capabilities and user experience. development roadmap includes several exciting features and improvements:
+
 About
 This project is a web-based application designed for efficient management and delivery of hospital food. Built using Laravel and Livewire, it offers a seamless and interactive user experience. The system is crafted to handle the intricacies of managing food stock, processing orders, and ensuring timely delivery within a hospital setting.
 
