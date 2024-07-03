@@ -1,4 +1,4 @@
-### :sparkles: **Ongoing Development**
+### :sparkles: **Staging Development**
 As this project is in an active development phase, we are continually working to enhance its capabilities and user experience. development roadmap includes several exciting features and improvements:
 
 About
